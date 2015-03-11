@@ -49,13 +49,10 @@ angular.module('48Laws')
 		$scope.title = $scope.law.title;
 	});
 
-}]).controller('LawsRandomController', ['$http', '$scope', function($http, $scope) {
-	
+}]).controller('LawsRandomController', ['$http', '$location', function($http, $location) {
+
 	var id = Math.floor((Math.random() * 48) + 1);
-	
-	$http({method: 'GET', url: './data/law' + id + '.json'}).success(function(data) {
-		$scope.law = data;
-	});
+	$location.path('/laws/' + id);
 
 }]);
 

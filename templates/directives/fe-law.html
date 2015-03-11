@@ -1,0 +1,19 @@
+<div class="law" 
+	ng-style="{'background-image' : 'url(./img/law-' + law.number + '-bg.png)'}">
+	<h1>
+		<span class="number">
+			Law {{law.number}}:
+		</span>
+		<span>
+			{{law.title}}
+		</span>
+	</h1>
+	<p>
+		{{law.description}}
+	</p>
+</div>
+
+<script>
+	var h = $(window).innerHeight() - 80;
+	$('.law').css('min-height', h + 'px');
+</script>

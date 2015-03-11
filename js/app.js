@@ -46,7 +46,7 @@ angular.module('48Laws')
 
 	$http({method: 'GET', url: './data/law' + id + '.json'}).success(function(data) {
 		$scope.law = data;
-		$scope.title = $scope.law.title;
+		$scope.currentLaw = id;
 	});
 
 }]).controller('LawsRandomController', ['$http', '$location', function($http, $location) {

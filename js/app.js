@@ -1,5 +1,5 @@
 //Routes
-angular.module('48Laws', ['ngRoute'])
+angular.module('48Laws', ['ngRoute', 'angulike'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
 	.when('/laws', {
@@ -33,6 +33,7 @@ angular.module('48Laws')
 
 	$http({method: 'GET', url: './data/law1.json'}).success(function(data) {
 		$scope.law = data;
+		$scope.summary = 'Law ' + $scope.law.number + ': ' + $scope.law.title + ' #48lawsofpower';
 	});
 
 }]).controller('LawsShowController', ['$http', '$routeParams', '$scope', function($http, $routeParams, $scope) {
@@ -47,6 +48,7 @@ angular.module('48Laws')
 	$http({method: 'GET', url: './data/law' + id + '.json'}).success(function(data) {
 		$scope.law = data;
 		$scope.currentLaw = id;
+		$scope.summary = 'Law ' + $scope.law.number + ': ' + $scope.law.title + ' #48lawsofpower';
 	});
 
 }]).controller('LawsRandomController', ['$http', '$location', function($http, $location) {

@@ -4,6 +4,22 @@ body{
 	font-family: 'Raleway', sans-serif;
 }
 
+.about{
+	padding: 20px;
+}
+
+.share{
+	position: absolute;
+	bottom: 40px;
+	right: 40px;
+}
+
+.share > span > iframe{
+	position: relative;
+	top: 5px;
+	margin-left: 5px;
+}
+
 .container{
 	margin: 0;
 	width: 100%;
@@ -136,6 +152,14 @@ and (max-device-width : 480px) {
 	.law{
 		padding: 0 10px;
 	}
+
+	.share{
+		position: static;
+		display: block;
+		width: 100%;
+		height: 50px;
+		margin-left: 20px;
+	}
 }
 
 /* Smartphones (portrait) ----------- */
@@ -155,6 +179,14 @@ and (max-device-width : 480px) {
 
 	.law{
 		padding: 0 15px;
+	}
+
+	.share{
+		position: static;
+		display: block;
+		width: 100%;
+		height: 50px;
+		margin-left: 20px;
 	}
 }
 
